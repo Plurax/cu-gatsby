@@ -1,0 +1,26 @@
+{
+  "name": "christoph-uhlich",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Christoph Uhlich",
+  "author": "Christoph Uhlich",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-react-helmet": "^5.2.0",
+    "gatsby-plugin-theme-ui": "^0.12.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "theme-ui": "^0.12.0"
+  }
+}
