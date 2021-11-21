@@ -1,0 +1,95 @@
+#+TITLE: Getting Started
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
+#+TODO: DRAFT | PUBLISHED
+#+TODO: TODO | DONE
+#+CATEGORY: Allgemeines
+
+
+* PUBLISHED So fängt es an...
+  CLOSED: [2020-11-29 So 21:02]
+  :PROPERTIES:
+  :language: de
+  :uuid:     20202911
+  :CATEGORY: Allgemeines
+  :END:
+  
+Endlich schaffe ich es mal das hier online zu stellen. Na ja, zumindestens der Großteil der Funktionen laufen nun. Dies ist mein "Blog" - auch wenn dieser Begriff eigentlich übertrieben ist, werde ich hier ab und zu mal etwas veröffentlichen.
+
+* PUBLISHED That's how it starts
+  CLOSED: [2020-11-29 So 21:02]
+  :PROPERTIES:
+  :language: en
+  :uuid:     20202911
+  :CATEGORY: General
+  :END:
+
+Finally, I got it online. Ok - at least the basic part of the publishing stuff is working. This is my "blog" - or how you would name it if sometimes there are things you want to place in public - but not that frequently.
+  
+* PUBLISHED Javascript Code
+  CLOSED: [2021-04-12 Mo 23:40]
+  :PROPERTIES:
+  :language: de
+  :uuid:     202103172240
+  :END:
+
+Endlich habe ich auch meine Visitenkarte etwas erweitert.
+
+Darüber hinaus habe ich der App auch noch angewöhnt Code mit highlight.js hübsch zu machen...
+Dazu hab ich mich der folgenden Seite bedient:
+[[https://gregbastianelli.com/highlight-js-gatsby-wordpress][HighlightJS mit Gatsby und Wordpres]]
+
+Damit kann ich relativ simpel die Code Schnipsel aus dem org-mode direkt als Code blocks einsetzen und mit HighlightJS stylen.
+
+#+begin_src js
+import hljs from "highlight.js"
+import "highlight.js/styles/atom-one-dark.css"
+
+hljs.configure({
+  languages: ["php", "javascript", "json", "bash", "scss"],
+})
+
+const highlightCode = () => {
+  const codes = document.querySelectorAll("pre > code")
+  for (let key in codes) {
+    if (typeof codes[key] === "object") {
+      hljs.highlightBlock(codes[key])
+    }
+  }
+}
+
+export default { highlightCode }
+#+end_src
+
+* PUBLISHED Javascript Code
+  CLOSED: [2021-04-12 Mo 23:39]
+  :PROPERTIES:
+  :language: en
+  :uuid:     202103172240
+  :END:
+
+Works also with JS?
+I borrowed some code from here:
+[[https://gregbastianelli.com/highlight-js-gatsby-wordpress][HightlightJS with gatsby and wordpress.]]
+
+With this I was able to integrate code snippets directly with highlighting.
+
+#+begin_src js
+import hljs from "highlight.js"
+import "highlight.js/styles/atom-one-dark.css"
+
+hljs.configure({
+  languages: ["php", "javascript", "json", "bash", "scss"],
+})
+
+const highlightCode = () => {
+  const codes = document.querySelectorAll("pre > code")
+  for (let key in codes) {
+    if (typeof codes[key] === "object") {
+      hljs.highlightBlock(codes[key])
+    }
+  }
+}
+
+export default { highlightCode }
+#+end_src
+
