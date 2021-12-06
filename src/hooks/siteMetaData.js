@@ -9,6 +9,7 @@ export const useSiteMetadata = () => {
             author
             siteUrl
             description
+            languages
             social { name url }
           }
         }

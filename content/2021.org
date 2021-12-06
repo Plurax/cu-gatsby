@@ -2,25 +2,22 @@
 #+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
 #+TODO: DRAFT | PUBLISHED
 #+TODO: TODO | DONE
-#+CATEGORY: Allgemeines
 
 
-* PUBLISHED So fängt es an...
+* PUBLISHED So fängt es an...                                       :Allgemeines:
   CLOSED: [2020-11-29 So 21:02]
   :PROPERTIES:
   :language: de
   :uuid:     20202911
-  :CATEGORY: Allgemeines
   :END:
   
 Endlich schaffe ich es mal das hier online zu stellen. Na ja, zumindestens der Großteil der Funktionen laufen nun. Dies ist mein "Blog" - auch wenn dieser Begriff eigentlich übertrieben ist, werde ich hier ab und zu mal etwas veröffentlichen.
 
-* PUBLISHED That's how it starts
+* PUBLISHED That's how it starts                                    :General:
   CLOSED: [2020-11-29 So 21:02]
   :PROPERTIES:
   :language: en
   :uuid:     20202911
-  :CATEGORY: General
   :END:
 
 Finally, I got it online. Ok - at least the basic part of the publishing stuff is working. This is my "blog" - or how you would name it if sometimes there are things you want to place in public - but not that frequently.
@@ -93,3 +90,10 @@ const highlightCode = () => {
 export default { highlightCode }
 #+end_src
 
+* PUBLISHED Orgajs und Gatsby                                     :Org-mode:Emacs:
+  CLOSED: [2021-12-04 Sa 17:51]
+  :PROPERTIES:
+  :language: de
+  :END:
+
+Das ist der Wahnsinn!

@@ -10,7 +10,7 @@ export default () => {
         All materials &copy; { `${(new Date()).getFullYear()}` }, { author }.
       </Box>
       <Box>
-        Powered by <a href="https://orgmode.org">org-mode</a>, using <a href="https://orga.js.org">orgajs</a> and <a href="https://www.gatsbyjs.com">Gatsby</a>.
+        Powered by <a sx={{textDecoration:"none",color:"primary"}} href="https://orgmode.org">org-mode</a>, using <a sx={{textDecoration:"none",color:"primary"}} href="https://orga.js.org">orgajs</a> and <a sx={{textDecoration:"none",color:"primary"}} href="https://www.gatsbyjs.com">Gatsby</a>.
       </Box>
     </footer>
 

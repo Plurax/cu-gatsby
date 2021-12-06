@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { ReactChild } from 'react'
-;import { Container, jsx, Styled } from 'theme-ui'
-import footer from './footer'
+;import { Container, jsx, Themed } from 'theme-ui'
+import Footer from './footer'
 import Header from './header'
 
 
 const Layout = ({ children }) => {
 
   return (
-    <Styled.root>
+    <Themed.root>
       <Container sx={{
         p: 3,
         display: 'flex',
@@ -21,9 +21,9 @@ const Layout = ({ children }) => {
         <div sx={{ display: 'flex', flexDirection: 'column', flex: '1 1 auto' }}>
           {children}
         </div>
-        <footer/>
+        <Footer/>
       </Container>
-    </Styled.root>
+    </Themed.root>
   )
 }
 
