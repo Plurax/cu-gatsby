@@ -89,11 +89,3 @@ const highlightCode = () => {
 
 export default { highlightCode }
 #+end_src
-
-* PUBLISHED Orgajs und Gatsby                                     :Org-mode:Emacs:
-  CLOSED: [2021-12-04 Sa 17:51]
-  :PROPERTIES:
-  :language: de
-  :END:
-
-Das ist der Wahnsinn!
