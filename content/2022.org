@@ -1,0 +1,62 @@
+#+TITLE: Year 2022
+#+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
+#+TODO: DRAFT | PUBLISHED
+* PUBLISHED Logitech Streamcam unter Ubuntu                  :Linux:Hardware:
+  :PROPERTIES:
+  :language: de
+  :uuid:     202201142200
+  :END:
+  
+Ich habe eine Logitech Streamcam am Desktop und habe mich immer gewundert, das die Kamera nur einmal nach dem Booten funktioniert. Danach bekommen die Applikationen Probleme sie zu finden und ich kann keine Videokonferenzen mehr machen und OBS findet sie auch nicht mehr.
+Ich habe nun das Problem gefunden: Manchmal spielt die Länge halt doch eine Rolle - das Kabel der Kamera ist recht lang. Da ich die Kamera an der Frontblende mit USB C angeschlossen habe, war scheinbar das Kabel noch mal länger und die Verbindung so instabil, das es nur beim Botten geklappt hat. Nach Analyse mit
+#+begin_src bash
+lsusb | grep Logitech
+#+end_src
+
+#+begin_src bash
+| Bus 003 Device 003: ID 046d:0893 Logitech | Inc. Logitech StreamCam    |
+| Bus 003 Device 005: ID 046d:c08e Logitech | Inc. Logitech StreamCam    |
+| Bus 003 Device 004: ID 046d:c328 Logitech | Inc. Corded Keyboard K280e |
+#+end_src
+
+konnte ich die Kamera finden und in
+
+#+begin_src bash
+dmesg
+#+end_src
+
+#+RESULTS:
+
+nach Ärger mit der USB ID suchen. Siehe da, das Gerät konnte nicht enumeriert werden.
+
+Die Lösung: Ein USBA zu USB C Adapter für ein paar Euro, der direkt im USB Port des Boards steckt. Jetzt funktioniert die Kamera auch zuverlässig unter Ubuntu...
+* PUBLISHED Logitech Streamcam unter Ubuntu                  :Linux:Hardware:
+  :PROPERTIES:
+  :language: en
+  :uuid:     202201142200
+  :END:
+
+I own a Logitech Streamcam, which I use at the Desktop and I always wondered why it stops working after the first usage under Ubuntu 20.0.4. After that, apps dont find it anymore and I cant proceed with video conferencing.
+Recently I found the issue: Sometimes length matters. The cable is long, adding the length of the internal connection to the front panel, its even longer. So it was realy instable so it worked only for the first time after boot.
+After checking
+#+begin_src bash
+lsusb | grep Logitech
+#+end_src
+
+#+begin_src bash
+| Bus 003 Device 003: ID 046d:0893 Logitech | Inc. Logitech StreamCam    |
+| Bus 003 Device 005: ID 046d:c08e Logitech | Inc. Logitech StreamCam    |
+| Bus 003 Device 004: ID 046d:c328 Logitech | Inc. Corded Keyboard K280e |
+#+end_src
+
+I was able to search for problems in
+
+#+begin_src bash
+dmesg
+#+end_src
+
+#+RESULTS:
+
+with the USB ID. There it was stated that enumeration failed.
+
+Solution: A small USBA to USB C adapter for some bucks fixed the issue.
