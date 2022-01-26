@@ -2,6 +2,7 @@
 #+ORGA_PUBLISH_KEYWORD: PUBLISHED DONE
 #+TODO: DRAFT | PUBLISHED
 * PUBLISHED Logitech Streamcam unter Ubuntu                  :Linux:Hardware:
+  CLOSED: [2022-01-14 Fr 22:14]
   :PROPERTIES:
   :language: de
   :uuid:     202201142200
@@ -30,7 +31,8 @@ dmesg
 nach Ärger mit der USB ID suchen. Siehe da, das Gerät konnte nicht enumeriert werden.
 
 Die Lösung: Ein USBA zu USB C Adapter für ein paar Euro, der direkt im USB Port des Boards steckt. Jetzt funktioniert die Kamera auch zuverlässig unter Ubuntu...
-* PUBLISHED Logitech Streamcam unter Ubuntu                  :Linux:Hardware:
+* PUBLISHED Logitech Streamcam on Ubuntu                     :Linux:Hardware:
+  CLOSED: [2022-01-14 Fr 22:14]
   :PROPERTIES:
   :language: en
   :uuid:     202201142200
@@ -60,3 +62,20 @@ dmesg
 with the USB ID. There it was stated that enumeration failed.
 
 Solution: A small USBA to USB C adapter for some bucks fixed the issue.
+
+* DRAFT Orgajs und Gatsby                                     :Org-mode:Emacs:
+  :PROPERTIES:
+  :language: de
+  :uuid:     202112082240
+  :END:
+
+Ich nutze seit Jahren Emacs, insbesondere Orgmode und mu4e. Diese Seite ist mit Gatsby erstellt und bezieht die Artikel aus org files.
+
+* DRAFT Mail in Emacs                                                 :Emacs:
+  :PROPERTIES:
+  :language: de
+  :uuid:     202112081946
+  :END:
+
+
+  https://github.com/daviwil/emacs-from-scratch/blob/master/show-notes/Emacs-Mail-01.org
