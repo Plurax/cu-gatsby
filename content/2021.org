@@ -22,7 +22,7 @@ Endlich schaffe ich es mal das hier online zu stellen. Na ja, zumindestens der G
 
 Finally, I got it online. Ok - at least the basic part of the publishing stuff is working. This is my "blog" - or how you would name it if sometimes there are things you want to place in public - but not that frequently.
   
-* PUBLISHED Javascript Code
+* PUBLISHED Javascript Code                                            :Code:
   CLOSED: [2021-04-12 Mo 23:40]
   :PROPERTIES:
   :language: de
@@ -57,7 +57,7 @@ const highlightCode = () => {
 export default { highlightCode }
 #+end_src
 
-* PUBLISHED Javascript Code
+* PUBLISHED Javascript Code                                            :Code:
   CLOSED: [2021-04-12 Mo 23:39]
   :PROPERTIES:
   :language: en

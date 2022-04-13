@@ -27,7 +27,7 @@ const PostDate = ({ post }) => (
         }}</Info>
       <Info>{{
           icon: <TimeToReadIcon/>,
-          info: `${post.timeToRead} minutes`
+          info: `${post.timeToRead} ${post.timeToRead > 1 ? "minutes" : "minute"}`
         }}</Info>
     </IconContext.Provider>
   </Flex>

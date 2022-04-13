@@ -63,19 +63,37 @@ with the USB ID. There it was stated that enumeration failed.
 
 Solution: A small USBA to USB C adapter for some bucks fixed the issue.
 
-* DRAFT Orgajs und Gatsby                                     :Org-mode:Emacs:
+* PUBLISHED Orgajs und Gatsby                                     :Org:Emacs:Code:
+CLOSED: [2022-04-12 Di 21:59]
   :PROPERTIES:
   :language: de
   :uuid:     202112082240
   :END:
 
-Ich nutze seit Jahren Emacs, insbesondere Orgmode und mu4e. Diese Seite ist mit Gatsby erstellt und bezieht die Artikel aus org files.
+Ich nutze seit Jahren Emacs. Der Ursprung meines Hangs zu diesem Editor liegt in meiner Vergangenheit als Embedded Entwickler für Medizingeräte (Beatmungsgeräte und Sauerstofferzeuger).
+Später habe ich ihn dank Orgmode und mu4e wieder entdeckt. [[https://www.orgmode.org][Org mode]] basiert auf Textdateien, die mit einer einfachen Syntax strukturierte Informationen enthalten können.
+
+Da ich nun oft mit org arbeite (Todo listen, Arbeitszeiten u.a.), jedoch weniger Ahnung von moderner Frontendprogrammierung habe (Ja ich kenne noch HTML(!) und PHP, mittlerweile ist das auch 20 Jahre her...), dachte ich das es ggf eine Möglichkeit gibt aus org files eine kleine Webseite zu erzeugen. Die gibt es:
+
+Diese Seite ist mit Gatsby erstellt und bezieht die Artikel aus org files. Die Quellen findet Ihr unter [[https://github.com/Plurax/cu-gatsby][cu-gatsby]] auf GitHub. Im Wesentlichen handelt es sich um eine [[https://www.gatsbyjs.com/][Gatsby]] Seite, die mit Hilfe von [[https://github.com/orgapp/orgajs][OrgaJS]] die vorliegenden org-files in einzelne Seiten transformiert. Ich habe den Code noch ein wenig erweitert, um auch Englisch anzubieten und die statische Generierung trotzdem auch mit den entsprechenden Links funktional zu machen. Dazu nutze ich im Wesentlichen eine "ID" (eigentlich ne Timestamp der ungefähren Zeit des Schreibens) an stelle vom Heading als "Key". Zusammen mit dem I18N Plugin von Gatsby kann ich damit direkt die Pfade auflösen und der Languageswitcher braucht nur den Prefix anpassen. Ob ich hier wirklich immer zweisprachig arbeite werde ich sehen, generell neigt man ja gern dazu sich viel vorzunehmen.
+
+* PUBLISHED Orgajs and Gatsby                                     :Org:Emacs:Code:
+CLOSED: [2022-04-12 Di 21:59]
+  :PROPERTIES:
+  :language: en
+  :uuid:     202112082240
+  :END:
+
+I am using Emacs since years. Originally I got used to it as an embedded C programmer for micro controllers in medical devices (ventilators, oxygen generators). Later I rediscovered Emacs thanks to org mode and mu4e. [[https://www.orgmode.org][Org mode]] is based on text files which can contain structured information with a simple syntax.
+
+Since I often work with org (todo lists, working hours, etc.), but have little idea of ​​modern frontend programming (yes, I still know HTML(!) and PHP, meanwhile that's 20 years ago...), I thought of a possibility to create a small website from org files. There it is:
+
+This page is created with Gatsby and uses org files as content source. You can find the sources at [[https://github.com/Plurax/cu-gatsby][cu-gatsby]] on GitHub. Essentially, it is a [[https://www.gatsbyjs.com/][Gatsby]] page, which transforms the org content with the help of [[https://github.com/orgapp/orgajs][OrgaJS]] into individual pages. I extended the code a bit to also offer English and still make the static generation functional with the appropriate links. I essentially use a "ID" (actually a timestamp of the post writing) instead of the heading as the "Key". Together with the I18N plugin from Gatsby I can resolve the paths directly and the language switcher only needs to adjust the prefix. I'll see if I really always work bilingually here, in general I tend to plan a lot.
 
 * DRAFT Mail in Emacs                                                 :Emacs:
   :PROPERTIES:
   :language: de
   :uuid:     202112081946
   :END:
-
 
   https://github.com/daviwil/emacs-from-scratch/blob/master/show-notes/Emacs-Mail-01.org
