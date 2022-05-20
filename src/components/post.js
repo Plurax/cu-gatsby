@@ -10,13 +10,13 @@ import { useEffect } from 'react'
 import { FaTags as TagsIcon } from 'react-icons/fa'
 import SEO from './seo'
 import Tags from './tags'
-import highlightHelper from '../utils/highlighthelper'
+import highlightCode from '../utils/highlighthelper'
 import { currentLanguage} from '../utils/localeLink'
 
 export default ({ data }) => {
   console.log("Post: ", data.orgPost);
   useEffect(() => {
-    highlightHelper.highlightCode()
+    highlightCode()
   })
   
   const post = data.orgPost

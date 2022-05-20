@@ -93,7 +93,39 @@ This page is created with Gatsby and uses org files as content source. You can f
 * DRAFT Mail in Emacs                                                 :Emacs:
   :PROPERTIES:
   :language: de
-  :uuid:     202112081946
+  :uuid:     2022051012207
   :END:
 
-  https://github.com/daviwil/emacs-from-scratch/blob/master/show-notes/Emacs-Mail-01.org
+Mail lese ich ebenfalls in Emacs. Dazu benutze ich einen lokalen Spiegel der Mails mit dem Tool mbsync aus den Mailboxen holt, sowie mu als Indexer, der praktischerweise direkt mit einem Emacs mode (mu4e) kommt. Meine Config ist dabei so angepasst, das ich mehrere Postfächer abrufen und innerhalb Emacs zwischen Ihnen umschalten kann.
+  
+Im folgenden Link findet Ihr ein paar Details über die Config [[https://github.com/daviwil/emacs-from-scratch/blob/master/show-notes/Emacs-Mail-01.org][Emacs from Scratch: Mail]].
+
+* PUBLISHED PDFs zusammenfassen                                 :Tools:Linux:
+CLOSED: [2022-05-17 Di 22:00]
+:PROPERTIES:
+:language: de
+:uuid:     20220505172100
+:END:
+
+Ich habe einen Brother DCPL2550DN. Das ist ein Multifunktionsgerät, welches auch via Selbsteinzug auf einen FTP Server Scannen kann. Ich nutze das um eingehenden Schriftverkehr, den ich digital sichern möchte, auf meiner Synology NAS abzulegen. Ein kleines Problem stellt hier allerdings das Scannen von beidseitig bedruckten Seiten dar. Hier gibt es Abhilfe mit dem Tool *pdftk*:
+
+Zunächst werden die Vorderseiten eingescannt. Nun werden die Rückseiten eingescannt. Hierzu einfach den Stapel umdrehen und erneut einscannen. Danach kann man mit Hilfe des Tools pdftk die beiden PDFs zusammenfügen. Die Option *end-1* führt hier dazu, das die Rückseiten in umgekehrter Reihenfolge eingefügt werden, so das wir kein Umsortieren benötigen. 
+
+#+begin_src bash
+pdftk A=odd.pdf B=even.pdf shuffle A Bend-1 output merged.pdf
+#+end_src
+
+* PUBLISHED Scanning double sided documents  :Tools:Linux:
+CLOSED: [2022-05-17 Di 22:00]
+:PROPERTIES:
+:language: en
+:uuid:     20220505172100
+:END:
+
+I own a Brother DCPL2550DN. This is a scan/print device which can put the scanned documents directly to an FTP target. I use this to digitize paper I want to keep on my Synology NAS. A problem is scanning double sided pages, as it cant scan with duplex. *pdftk* can help with that:
+
+First I scan the odd pages. Then I turn the stack around and scan the even pages. With the tool its then possible to combine the PDF to the correct document. *end-1* will cause to add even pages with reversed order to avoid resorting.
+
+#+begin_src bash
+pdftk A=odd.pdf B=even.pdf shuffle A Bend-1 output merged.pdf
+#+end_src
